@@ -1,0 +1,51 @@
+#include <iostream>
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main(){
+     
+     int arr_size;
+     cin>>arr_size;
+     
+     int arr[arr_size];
+     
+     int maximum= -9876;
+     int smax= -9875;
+     
+     for(int i=0; i<arr_size; i++){
+     cin>>arr[i];
+     }
+     
+     if(arr[0]>arr[1]){
+     maximum=arr[0];
+     smax= arr[1];
+     }
+     else{
+     maximum=arr[1];
+     smax= arr[0];
+     }
+     
+     for(int i=2; i<arr_size; i++){
+     if(arr[i]>smax){
+         if(arr[i]>maximum){
+         smax= maximum;
+         maximum=arr[i];
+         }
+         else{
+         smax= arr[i];
+         }
+     }
+     }
+     cout<<"1st maximum number in the given array is: "<<maximum<<endl;
+     cout<<"2st maximum number in the given array is: "<<smax<<endl;
+     
+     return 0;
+}
+
+
+/* input=> 8
+arr[8] = 101 55 72 81 52 12 23 35
+
+output=> maximum= 101
+         smax = 81
