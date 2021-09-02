@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num;
+	cin>>num;
+	int maximum= -12345;
+    int arr[num];
+	int Arr[num];
+	for(int i=0; i<num; i++){
+	    cin>>arr[i];
+	    Arr[i]=0;
+	}
+	for(int i=0; i<num; i++){
+	    Arr[arr[i]]++;
+	    if(Arr[arr[i]]>0){
+	        maximum = max(maximum, Arr[arr[i]]);
+	       
+	    }
+	}
+	cout<<"frequency is "<< maximum;
+	return 0;
+}
+
+
+/* input => num=6;
+arr[8] = 2 2 3 4 5 2
+
+output => 3 */
