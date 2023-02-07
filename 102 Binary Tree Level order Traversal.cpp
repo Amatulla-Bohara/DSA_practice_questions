@@ -4,7 +4,7 @@ public:
         vector<vector<int>> ans;
         
         if(root==NULL) return ans;
-        
+        //root
         queue <TreeNode*> q;
         
         q.push(root);
